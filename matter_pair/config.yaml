@@ -1,7 +1,8 @@
 name: Matter Pair
-version: "0.1.4"
+version: "0.2.0"
 slug: matter_pair
 description: Commission Matter-over-Thread devices using this machine's Bluetooth adapter (no phone needed)
+url: https://git.openport.io/varia/matter-pair
 arch:
   - amd64
   - aarch64
