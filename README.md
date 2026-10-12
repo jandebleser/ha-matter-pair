@@ -1,5 +1,7 @@
 # Matter Pair — commission Matter devices without a phone
 
+[![Add repository to my Home Assistant](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fjandebleser%2Fmatter-pair)
+
 A Home Assistant add-on that commissions **Matter-over-Thread** devices using
 the Home Assistant machine's **own Bluetooth adapter**, instead of the
 companion app on your phone.
@@ -46,9 +48,9 @@ Bluetooth integration.
 
 ### As an add-on repository
 
-Settings → Add-ons → Add-on store → ⋮ → Repositories → add this repository's
-URL. Then install **Matter Pair** from the store, start it, and enable
-"Show in sidebar".
+Click the **Add repository** badge above, or go to Settings → Add-ons →
+Add-on store → ⋮ → Repositories and add this repository's URL. Then install
+**Matter Pair** from the store, start it, and enable "Show in sidebar".
 
 ### As a local add-on
 
