@@ -8,6 +8,18 @@ A Home Assistant add-on that commissions **Matter-over-Thread** devices using
 the Home Assistant machine's **own Bluetooth adapter**, instead of the
 companion app on your phone.
 
+> [!NOTE]
+> **Home Assistant has built-in ways to do this now.** The Matter Server
+> add-on's own Web UI has a **Commission node** button (add-on page → *Open
+> Web UI*), and recent releases add a phone-free flow in the core UI
+> (*Add Matter device* → enter the code manually) plus BLE-proxy commissioning
+> in the matterjs-based Matter Server 9.x beta. Try those first. Matter Pair
+> remains useful as a one-button wrapper that also automates two sharp edges
+> of the stable Matter Server: it disables the HA Bluetooth integration during
+> pairing (it can starve the Matter SDK's BLE scan) and re-loads the live
+> Thread dataset from OTBR before every attempt (the server forgets it on
+> restart).
+
 ## Why
 
 The official pairing flow requires the HA companion app, which hands the
@@ -16,10 +28,11 @@ Bluetooth onboarding to Google Play Services (Android) or the Matter framework
 Play Services insists you are "not connected to Wi-Fi" no matter what — you
 are locked out of adding Matter devices entirely.
 
-The Matter server that ships with Home Assistant can do the BLE part itself;
-it's just not exposed anywhere in the UI, and using it by hand means juggling
-four different APIs in the right order. This add-on wraps that into a single
-page: type the pairing code, press one button.
+The Matter server that ships with Home Assistant can do the BLE part itself,
+and its Web UI even exposes a commission button — but a successful pair can
+still mean juggling the Bluetooth integration, Thread credentials and server
+restarts in the right order. This add-on wraps all of that into a single page:
+type the pairing code, press one button.
 
 ## What it does per pairing attempt
 
